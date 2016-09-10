@@ -230,9 +230,9 @@ def multiline_regex_suggestor(regex, substitution=None, ignore_case=False):
     """
     if isinstance(regex, str):
         if ignore_case is False:
-            regex = re.compile(regex, re.DOTALL)
+            regex = re.compile(regex, re.MULTILINE)
         else:
-            regex = re.compile(regex, re.DOTALL | re.IGNORECASE)
+            regex = re.compile(regex, re.MULTILINE | re.IGNORECASE)
 
     if isinstance(substitution, str):
         def substitution_func(match):
